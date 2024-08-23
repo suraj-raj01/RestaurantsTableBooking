@@ -6,7 +6,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Footer from "./Footer";
 const Home = () => {
   const mynav = useNavigate();
-  const booking = (id) => {
+  const booking = (id,id1) => {
     mynav(`/booking/${id}`);
   };
   return (
@@ -55,7 +55,7 @@ const Home = () => {
       <div id="home">
         <div id="text">
           <h1 id="heading">
-            Table booking system <br /> for smart restaurants
+            Table booking system for smart restaurants
           </h1>
           <hr />
           <p>
@@ -179,7 +179,7 @@ const Home = () => {
           <Card>
             <Card.Body>
               <img
-                src="https://www.chagrinvalleycustomfurniture.com/images/16299/image/modal/large-led-lit-live-edge-river-table_3x2.jpg"
+                src="https://www.travelandleisure.com/thmb/a8tPoQdzt78i7pPv5fqVwuiL3XE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Linger-Time-Restaurant-Table-TOOLONG0316-559224b42fb749f9af69f77a34c7f6c6.jpg"
                 width="100%"
                 alt=""
               />
@@ -200,7 +200,7 @@ const Home = () => {
           <Card>
             <Card.Body>
               <img
-                src="https://www.chagrinvalleycustomfurniture.com/images/16299/image/modal/large-led-lit-live-edge-river-table_3x2.jpg"
+                src="https://haveaseat.com.au/wp-content/uploads/2022/05/image-006.jpg"
                 width="100%"
                 alt=""
               />
@@ -221,7 +221,7 @@ const Home = () => {
           <Card>
             <Card.Body>
               <img
-                src="https://www.chagrinvalleycustomfurniture.com/images/16299/image/modal/large-led-lit-live-edge-river-table_3x2.jpg"
+                src="https://www.thechairmarket.com/cdn/shop/articles/Screenshot_2024-01-11_134721.jpg?v=1704973750&width=640"
                 width="100%"
                 alt=""
               />

@@ -70,10 +70,11 @@ const Display = () => {
     <>
       <div
         style={{
+          marginTop:'10px',
           height: "80vh",
           width: "100%",
           padding: "10px",
-          border: "2px solid",
+          boxShadow:'0px 0px 2px',
           overflowY: "scroll",
         }}
       >

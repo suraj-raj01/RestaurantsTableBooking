@@ -20,7 +20,7 @@ const Booking = () => {
     setInput((values) => ({ ...values, [name]: value }));
     console.log(input);
   };
-  let a = input.tables;
+  let a = 20;
   const handleSubmit = (e) => {
     e.preventDefault();
     a -= input.table;
@@ -33,11 +33,14 @@ const Booking = () => {
         mynav("/display");
       });
     } else {
-      alert("Table full");
+      alert("Table not Available!!!");
     }
   };
   return (
     <>
+    <div id="avl">
+      Table Available {a}
+    </div>
       <div
         style={{
           height: "85vh",
@@ -49,8 +52,7 @@ const Booking = () => {
       >
         <Form id="form">
           <center>
-            <p>Your Table Number : {id}</p>
-            <h2>Book Your Table Here</h2>
+            <h2>Table Number : {id}</h2>
           </center>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Control
@@ -117,7 +119,7 @@ const Booking = () => {
           <Form.Group as={Col} controlId="formGridState" style={{display:'none'}}>
             <Form.Control
               name="tables"
-              value={input.tables=20}
+              value={input.tables={a}}
               required
               placeholder="Enter number of table"
               onChange={handleInput}

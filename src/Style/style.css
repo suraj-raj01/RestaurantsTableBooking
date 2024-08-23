@@ -112,3 +112,10 @@ td {
     font-size: 12px;
     font-weight: bold;
 }
+/* // table available */
+#avl{
+    position: fixed;
+    top: 200px;
+    left: 130px;
+    font-size: 30px;
+}
