@@ -6,7 +6,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Footer from "./Footer";
 const Home = () => {
   const mynav = useNavigate();
-  const booking = (id,id1) => {
+  const booking = (id) => {
     mynav(`/booking/${id}`);
   };
   return (
