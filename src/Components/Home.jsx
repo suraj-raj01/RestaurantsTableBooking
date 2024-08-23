@@ -6,8 +6,8 @@ import Carousel from "react-bootstrap/Carousel";
 import Footer from "./Footer";
 const Home = () => {
   const mynav = useNavigate();
-  const booking = () => {
-    mynav("/booking");
+  const booking = (id) => {
+    mynav(`/booking/${id}`);
   };
   return (
     <>
@@ -16,8 +16,8 @@ const Home = () => {
           <img
             src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
             alt="First slide"
-            height='400px'
-            width='100%'
+            height="400px"
+            width="100%"
           />
           <Carousel.Caption>
             <h5>First slide label</h5>
@@ -28,8 +28,8 @@ const Home = () => {
           <img
             src="https://www.fabhotels.com/blog/wp-content/uploads/2018/08/Feature-Image-Resize_290918_600x400.jpg:cf-webp:w-450:h-240"
             alt="First slide"
-            height='400px'
-            width='100%'
+            height="400px"
+            width="100%"
           />
           <Carousel.Caption>
             <h5>Second slide label</h5>
@@ -40,8 +40,8 @@ const Home = () => {
           <img
             src="https://img.freepik.com/free-photo/female-student-working-parttime-as-waitress-serving-food-guest-pub_637285-2436.jpg"
             alt="First slide"
-            height='400px'
-            width='100%'
+            height="400px"
+            width="100%"
           />
           <Carousel.Caption>
             <h5>Third slide label</h5>
@@ -121,7 +121,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={booking}>
+              <Button variant="success" onClick={() => booking(1)}>
                 Book Now→
               </Button>
               <p></p>
@@ -142,7 +142,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={booking}>
+              <Button variant="success" onClick={() => booking(2)}>
                 Book Now→
               </Button>
               <p></p>
@@ -164,7 +164,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={booking}>
+              <Button variant="success" onClick={() => booking(3)}>
                 Book Now→
               </Button>
               <p></p>
@@ -191,7 +191,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={booking}>
+              <Button variant="success" onClick={() => booking(4)}>
                 Book Now→
               </Button>
               <p></p>
@@ -212,7 +212,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={booking}>
+              <Button variant="success" onClick={() => booking(5)}>
                 Book Now→
               </Button>
               <p></p>
@@ -233,7 +233,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={booking}>
+              <Button variant="success" onClick={() => booking(6)}>
                 Book Now→
               </Button>
               <p></p>
@@ -241,7 +241,7 @@ const Home = () => {
           </Card>
         </CardGroup>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

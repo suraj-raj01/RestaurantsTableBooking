@@ -4,11 +4,14 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Booking = () => {
+  const {id} = useParams();
+  console.log(id)
   const mynav = useNavigate();
   const [input, setInput] = useState({});
   const handleInput = (e) => {
@@ -17,15 +20,21 @@ const Booking = () => {
     setInput((values) => ({ ...values, [name]: value }));
     console.log(input);
   };
+  let a = input.tables;
   const handleSubmit = (e) => {
     e.preventDefault();
-    let url = "http://localhost:3000/Restuarent";
-    axios.post(url, input).then((res) => {
-      console.log(res.data);
-      console.log(res.table);
-      toast.success("Booking Successfull");
-      mynav("/display");
-    });
+    a -= input.table;
+    console.log(a);
+    if (a > 0) {
+      let url = "http://localhost:3000/Restuarent";
+      axios.post(url, input).then((res) => {
+        console.log(res.data);
+        toast.success("Booking Successfull");
+        mynav("/display");
+      });
+    } else {
+      alert("Table full");
+    }
   };
   return (
     <>
@@ -39,7 +48,10 @@ const Booking = () => {
         }}
       >
         <Form id="form">
-          <center><h2>Book Your Table Here</h2></center>
+          <center>
+            <p>Your Table Number : {id}</p>
+            <h2>Book Your Table Here</h2>
+          </center>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Control
               type="text"
@@ -97,6 +109,15 @@ const Booking = () => {
             <Form.Control
               name="table"
               value={input.table}
+              required
+              placeholder="Enter number of table"
+              onChange={handleInput}
+            />
+          </Form.Group>
+          <Form.Group as={Col} controlId="formGridState" style={{display:'none'}}>
+            <Form.Control
+              name="tables"
+              value={input.tables=20}
               required
               placeholder="Enter number of table"
               onChange={handleInput}
