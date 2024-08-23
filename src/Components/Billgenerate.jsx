@@ -182,9 +182,9 @@ const Billgenerate = () => {
               name="people"
               placeholder="Enter number of people"
               value={
-                "₹"+input.people * 150 +
+                input.people * 150 +
                 input.table * 100 +
-                input.hour * 50 * input.table +
+                input.hour * 50 * input.table+"₹"
                 
               }
               onChange={handleInput}
