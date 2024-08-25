@@ -113,7 +113,7 @@ const Home = () => {
                 width="100%"
                 alt=""
               />
-              <Card.Title>Table No: 01</Card.Title>
+              <Card.Title>Food Type SouthIndian</Card.Title>
               <Card.Text>
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
@@ -121,7 +121,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking(1)}>
+              <Button variant="success" onClick={() => booking("SouthIndian")}>
                 Book Now→
               </Button>
               <p></p>
@@ -135,14 +135,14 @@ const Home = () => {
                 width="100%"
                 alt=""
               />
-              <Card.Title>Table No: 02</Card.Title>
+              <Card.Title>Food Type NorthIndian</Card.Title>
               <Card.Text>
                 This card has supporting text below as a natural lead-in to
                 additional content.
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking(2)}>
+              <Button variant="success" onClick={() => booking("NorthIndian")}>
                 Book Now→
               </Button>
               <p></p>
@@ -156,7 +156,7 @@ const Home = () => {
                 width="100%"
                 alt=""
               />
-              <Card.Title>Table No: 03</Card.Title>
+              <Card.Title>Food Type Chinese</Card.Title>
               <Card.Text>
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This card has even longer content
@@ -164,7 +164,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking(3)}>
+              <Button variant="success" onClick={() => booking("Chinese")}>
                 Book Now→
               </Button>
               <p></p>
@@ -183,7 +183,7 @@ const Home = () => {
                 width="100%"
                 alt=""
               />
-              <Card.Title>Table No: 04</Card.Title>
+              <Card.Title>Food Type Bengali</Card.Title>
               <Card.Text>
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This card has even longer content
@@ -191,7 +191,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking(4)}>
+              <Button variant="success" onClick={() => booking("Bengali")}>
                 Book Now→
               </Button>
               <p></p>
@@ -204,7 +204,7 @@ const Home = () => {
                 width="100%"
                 alt=""
               />
-              <Card.Title>Table No: 05</Card.Title>
+              <Card.Title>Food Type American</Card.Title>
               <Card.Text>
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This card has even longer content
@@ -212,7 +212,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking(5)}>
+              <Button variant="success" onClick={() => booking("American")}>
                 Book Now→
               </Button>
               <p></p>
@@ -225,7 +225,7 @@ const Home = () => {
                 width="100%"
                 alt=""
               />
-              <Card.Title>Table No: 06</Card.Title>
+              <Card.Title>Food Type Japani</Card.Title>
               <Card.Text>
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This card has even longer content
@@ -233,7 +233,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking(6)}>
+              <Button variant="success" onClick={() => booking("Japani")}>
                 Book Now→
               </Button>
               <p></p>

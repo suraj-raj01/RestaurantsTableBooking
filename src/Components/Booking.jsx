@@ -52,7 +52,7 @@ const Booking = () => {
       >
         <Form id="form">
           <center>
-            <h2>Table Number : {id}</h2>
+            <h3>Food Type: {id}</h3>
           </center>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Control

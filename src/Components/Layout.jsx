@@ -23,7 +23,7 @@ const Layout = () => {
             <Navbar.Collapse id="navbarScroll">
               <Nav
                 className="me-auto my-2 my-lg-0"
-                style={{ maxHeight: "200px", backgroundColor: "white" }}
+                style={{ maxHeight: "230px", padding:'10px', backgroundColor: "white" }}
                 navbarScroll
               >
                 <Nav.Link as={Link} to="home">
@@ -56,7 +56,7 @@ const Layout = () => {
                   About
                 </Nav.Link>
               </Nav>
-              <Form className="d-flex">
+              <Form className="d-flex" style={{backgroundColor:'white',padding:'10px'}}>
                 <Nav.Link as={Link} to="display">
                   <Button variant="outline-success">Bookings</Button>
                 </Nav.Link>

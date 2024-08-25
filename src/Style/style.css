@@ -1,6 +1,7 @@
 #navbar {
     height: 10vh;
     background-color: white;
+    z-index: 10;
 }
 
 #hero {
@@ -28,7 +29,7 @@ body {
 }
 
 #heading {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     color: green;
 }
@@ -118,4 +119,19 @@ td {
     top: 200px;
     left: 130px;
     font-size: 30px;
+}
+@media(max-width:440px){
+    #heading{
+        font-size: 30px;
+    }
+    #text p{
+        font-size: 14px;
+    }
+    #avl{
+        top: 100px;
+        left: 80px;
+    }
+    #images img {
+        height: 20px;
+    }
 }
