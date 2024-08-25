@@ -29,13 +29,17 @@ body {
 }
 
 #heading {
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     color: green;
 }
 
 #home p {
     font-size: 18px;
+}
+
+#table{
+    font-style: italic;
 }
 
 #form {
@@ -134,4 +138,12 @@ td {
     #images img {
         height: 20px;
     }
+}
+#about{
+    height: 80vh;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

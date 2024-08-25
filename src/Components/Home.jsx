@@ -20,20 +20,16 @@ const Home = () => {
             width="100%"
           />
           <Carousel.Caption>
-            <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
-            src="https://www.fabhotels.com/blog/wp-content/uploads/2018/08/Feature-Image-Resize_290918_600x400.jpg:cf-webp:w-450:h-240"
+            src="https://t3.ftcdn.net/jpg/03/24/73/92/360_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg"
             alt="First slide"
             height="400px"
             width="100%"
           />
           <Carousel.Caption>
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -44,29 +40,28 @@ const Home = () => {
             width="100%"
           />
           <Carousel.Caption>
-            <h5>Third slide label</h5>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
 
       <div id="home">
         <div id="text">
-          <h1 id="heading">
-            Table booking system for smart restaurants
-          </h1>
+          <h1 id="heading">Table booking system for smart restaurants</h1>
           <hr />
           <p>
             Boost sales, enhance customer service, and minimize no-shows. Let
-            your business grow on autopilot!
+            your business grow on autopilot! <br />
+            By investing in a reliable restaurant table booking system, you can
+            elevate your dining experience and drive business success.
+          </p>
+          <br />
+          <p>
+            ⁕ Digital reservation book for the team <br />
+            ⁕ Online reservations for your clients <br />⁕ Data and reports for
+            the manager
           </p>
 
-          <p>→ Digital reservation book for the team </p>
-          <p>→ Online reservations for your clients</p>
-          <p>→ Data and reports for the manager</p>
-
+          <br />
           <div>
             <a href="#table">
               <Button variant="success">Get Started →</Button>

@@ -15,7 +15,7 @@ const Layout = () => {
             <Navbar.Brand
               as={Link}
               to="home"
-              style={{ fontWeight: "bold", fontSize: "30px" }}
+              style={{ fontWeight: "bold", fontSize: "30px",color:'green' }}
             >
               Restuarant
             </Navbar.Brand>
@@ -49,10 +49,10 @@ const Layout = () => {
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action5">Pub Bars</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link as={Link} to="#">
+                <Nav.Link as={Link} to="pricing">
                   Pricing
                 </Nav.Link>
-                <Nav.Link as={Link} to="#">
+                <Nav.Link as={Link} to="about">
                   About
                 </Nav.Link>
               </Nav>
