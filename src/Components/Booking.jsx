@@ -10,7 +10,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Booking = () => {
-  const {id} = useParams();
+  const {id,id1} = useParams();
   console.log(id)
   const mynav = useNavigate();
   const [input, setInput] = useState({});
@@ -20,26 +20,20 @@ const Booking = () => {
     setInput((values) => ({ ...values, [name]: value }));
     console.log(input);
   };
-  let a = 20;
   const handleSubmit = (e) => {
-    e.preventDefault();
-    a -= input.table;
-    console.log(a);
-    if (a > 0) {
+    e.preventDefault();{
       let url = "http://localhost:3000/Restuarent";
       axios.post(url, input).then((res) => {
         console.log(res.data);
         toast.success("Booking Successfull");
         mynav("/display");
       });
-    } else {
-      alert("Table not Available!!!");
     }
   };
   return (
     <>
     <div id="avl">
-      Table Available {a}
+      Table Available {id1}
     </div>
       <div
         style={{
@@ -52,7 +46,7 @@ const Booking = () => {
       >
         <Form id="form">
           <center>
-            <h3>Food Type: {id}</h3>
+            <h3>Food Type: " {id} "</h3>
           </center>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Control
@@ -116,15 +110,7 @@ const Booking = () => {
               onChange={handleInput}
             />
           </Form.Group>
-          <Form.Group as={Col} controlId="formGridState" style={{display:'none'}}>
-            <Form.Control
-              name="tables"
-              value={input.tables={a}}
-              required
-              placeholder="Enter number of table"
-              onChange={handleInput}
-            />
-          </Form.Group>
+    
           <Form.Group as={Col} controlId="formGridCity">
             <Form.Control
               name="people"

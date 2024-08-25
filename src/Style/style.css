@@ -9,7 +9,11 @@
     width: 100%;
     /* background-color: red; */
 }
-
+.demo{
+    body{
+        background-color: black;
+    }
+}
 body {
     background-color: white;
 }

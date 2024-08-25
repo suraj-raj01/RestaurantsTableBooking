@@ -4,13 +4,30 @@ import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 import Footer from "./Footer";
+
+import { InputText } from 'primereact/inputtext';
+import React, { useState } from "react";
+import { Dialog } from 'primereact/dialog';
+
 const Home = () => {
   const mynav = useNavigate();
-  const booking = (id) => {
-    mynav(`/booking/${id}`);
+  const booking = (id,id1) => {
+    mynav(`/booking/${id}/${id1}`);
   };
+  const [visible, setVisible] = useState(false);
   return (
     <>
+     <div className="card flex justify-content-center">
+            <Dialog header="Login" visible={visible} style={{ width: '50vw' }} onHide={() => {if (!visible) return; setVisible(false); }}>
+            <div className="card flex flex-wrap align-items-center justify-content-center gap-2">
+              <br /><br />
+            <InputText type="text" placeholder="username" tooltip="Enter your username" tooltipOptions={{ autoHide: false }} />
+            <InputText type="text" placeholder="password" tooltip="Enter your username" />
+            <Button tooltip="Confirm to proceed" tooltipOptions={{ showDelay: 1000, hideDelay: 300 }} label="Save" >Submit</Button>
+            <br />
+        </div>
+            </Dialog>
+        </div>
       <Carousel data-bs-theme="dark">
         <Carousel.Item>
           <img
@@ -47,7 +64,7 @@ const Home = () => {
       <div id="home">
         <div id="text">
           <h1 id="heading">Table booking system for smart restaurants</h1>
-          <hr />
+          <br />
           <p>
             Boost sales, enhance customer service, and minimize no-shows. Let
             your business grow on autopilot! <br />
@@ -68,12 +85,13 @@ const Home = () => {
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#">
-              <Button variant="success">Login →</Button>
+              <Button variant="success" label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>Login →</Button>
             </a>
           </div>
         </div>
         <div id="img"></div>
       </div>
+      <hr />
       <div id="footer">
         <h4>Trusted by restaurants, bars and clubs in over 50+ cities</h4>
         <div id="images">
@@ -116,7 +134,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("SouthIndian")}>
+              <Button variant="success" onClick={() => booking("SouthIndian",20)}>
                 Book Now→
               </Button>
               <p></p>
@@ -137,7 +155,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("NorthIndian")}>
+              <Button variant="success" onClick={() => booking("NorthIndian",15)}>
                 Book Now→
               </Button>
               <p></p>
@@ -159,7 +177,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("Chinese")}>
+              <Button variant="success" onClick={() => booking("Chinese",10)}>
                 Book Now→
               </Button>
               <p></p>
@@ -186,7 +204,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("Bengali")}>
+              <Button variant="success" onClick={() => booking("Bengali",20)}>
                 Book Now→
               </Button>
               <p></p>
@@ -207,7 +225,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("American")}>
+              <Button variant="success" onClick={() => booking("American",25)}>
                 Book Now→
               </Button>
               <p></p>
@@ -228,7 +246,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("Japani")}>
+              <Button variant="success" onClick={() => booking("Japani",15)}>
                 Book Now→
               </Button>
               <p></p>
