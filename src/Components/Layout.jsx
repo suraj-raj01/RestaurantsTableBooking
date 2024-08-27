@@ -7,10 +7,10 @@ import Navbar from "react-bootstrap/Navbar";
 import { Outlet, Link } from "react-router-dom";
 import "primeicons/primeicons.css";
 
+function mode(){
+  document.body.classList.toggle('demo')
+}
 const Layout = () => {
-  const mode = () =>{
-    document.body.classList.toggle("demo");
-  }
   return (
     <>
       <Container>
@@ -64,20 +64,32 @@ const Layout = () => {
                   About
                 </Nav.Link>
               </Nav>
-                <Nav.Link as={Link} to="https://www.linkedin.com/in/suraj-kumar-1965b0296/">
-              <span className="pi pi-linkedin" style={{fontSize:'1.2rem'}} onClick={mode}></span>
-                </Nav.Link>
-              &nbsp;&nbsp;&nbsp;
-              <span className="pi pi-sun" style={{fontSize:'1.2rem'}}></span>
-              &nbsp;&nbsp;&nbsp;
-                <Nav.Link as={Link} to="https://github.com/">
-                <span className="pi pi-github" style={{fontSize:'1.2rem'}}></span>
-                </Nav.Link>
+             <div style={{display:'flex',gap:'10px',backgroundColor:'white',padding:"10px"}}>
+             <span
+                className="pi pi-sun"
+                style={{ fontSize: "1.2rem" }}
+                onClick={()=>mode}
+              ></span>
+             <Nav.Link
+                as={Link}
+                to="https://www.linkedin.com/in/suraj-kumar-1965b0296/"
+              >
+                <span
+                  className="pi pi-linkedin"
+                  style={{ fontSize: "1.2rem" }}
+                ></span>
+              </Nav.Link>
               
-              &nbsp;&nbsp;&nbsp;
+              <Nav.Link as={Link} to="https://github.com/">
+                <span
+                  className="pi pi-github"
+                  style={{ fontSize: "1.2rem" }}
+                ></span>
+              </Nav.Link>
+             </div>
               <Form
                 className="d-flex"
-                style={{ backgroundColor: "white", padding: "10px" }}
+                style={{ backgroundColor: "white", padding: "20px 10px" }}
               >
                 <Nav.Link as={Link} to="display">
                   <Button variant="outline-success">Bookings</Button>
