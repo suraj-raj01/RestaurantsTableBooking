@@ -9,6 +9,12 @@ const Billgenerate = () => {
   const { id } = useParams();
   const [input, setInput] = useState({});
 
+  function capture(){
+   let a = document.getElementById("bill");
+    window.print();
+  }
+
+
   const loadData = () => {
     let url = `http://localhost:3000/Restuarent/${id}`;
     axios.get(url).then((res) => {
@@ -36,9 +42,6 @@ const Billgenerate = () => {
   //     })
   // }
 
-  const capture = () => {
-    print();
-  };
   return (
     <>
       <div
@@ -184,8 +187,8 @@ const Billgenerate = () => {
               value={
                 input.people * 150 +
                 input.table * 100 +
-                input.hour * 50 * input.table+"₹"
-                
+                input.hour * 50 * input.table +
+                "₹"
               }
               onChange={handleInput}
             />

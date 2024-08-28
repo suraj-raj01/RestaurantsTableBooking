@@ -3,32 +3,55 @@ import CardGroup from "react-bootstrap/CardGroup";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
-import Footer from "./Footer";
 
-import { InputText } from 'primereact/inputtext';
+import { InputText } from "primereact/inputtext";
 import React, { useState } from "react";
-import { Dialog } from 'primereact/dialog';
+import { Dialog } from "primereact/dialog";
 
 const Home = () => {
   const mynav = useNavigate();
-  const booking = (id,id1) => {
+  const booking = (id, id1) => {
     mynav(`/booking/${id}/${id1}`);
   };
   const [visible, setVisible] = useState(false);
   return (
     <>
-     <div className="card flex justify-content-center">
-            <Dialog header="Login" visible={visible} style={{ width: '50vw' }} onHide={() => {if (!visible) return; setVisible(false); }}>
-            <div className="card flex flex-wrap align-items-center justify-content-center gap-2">
-              <br /><br />
-            <InputText type="text" placeholder="username" tooltip="Enter your username" tooltipOptions={{ autoHide: false }} />
-            <InputText type="text" placeholder="password" tooltip="Enter your username" />
-            <Button tooltip="Confirm to proceed" tooltipOptions={{ showDelay: 1000, hideDelay: 300 }} label="Save" >Submit</Button>
+      <div className="card flex justify-content-center">
+        <Dialog
+          header="Login"
+          visible={visible}
+          style={{ width: "50vw" }}
+          onHide={() => {
+            if (!visible) return;
+            setVisible(false);
+          }}
+        >
+          <div className="card flex flex-wrap align-items-center justify-content-center gap-2">
             <br />
-        </div>
-            </Dialog>
-        </div>
-      <Carousel data-bs-theme="dark">
+            <br />
+            <InputText
+              type="text"
+              placeholder="username"
+              tooltip="Enter your username"
+              tooltipOptions={{ autoHide: false }}
+            />
+            <InputText
+              type="text"
+              placeholder="password"
+              tooltip="Enter your username"
+            />
+            <Button
+              tooltip="Confirm to proceed"
+              tooltipOptions={{ showDelay: 1000, hideDelay: 300 }}
+              label="Save"
+            >
+              Submit
+            </Button>
+            <br />
+          </div>
+        </Dialog>
+      </div>
+      <Carousel data-bs-theme="dark" id="crousel">
         <Carousel.Item>
           <img
             src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
@@ -36,8 +59,7 @@ const Home = () => {
             height="400px"
             width="100%"
           />
-          <Carousel.Caption>
-          </Carousel.Caption>
+          <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -46,8 +68,7 @@ const Home = () => {
             height="400px"
             width="100%"
           />
-          <Carousel.Caption>
-          </Carousel.Caption>
+          <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -56,8 +77,7 @@ const Home = () => {
             height="400px"
             width="100%"
           />
-          <Carousel.Caption>
-          </Carousel.Caption>
+          <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
       </Carousel>
 
@@ -85,7 +105,14 @@ const Home = () => {
             </a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="#">
-              <Button variant="success" label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)}>Login →</Button>
+              <Button
+                variant="success"
+                label="Show"
+                icon="pi pi-external-link"
+                onClick={() => setVisible(true)}
+              >
+                Login →
+              </Button>
             </a>
           </div>
         </div>
@@ -134,7 +161,10 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("SouthIndian",20)}>
+              <Button
+                variant="success"
+                onClick={() => booking("SouthIndian", 20)}
+              >
                 Book Now→
               </Button>
               <p></p>
@@ -155,7 +185,10 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("NorthIndian",15)}>
+              <Button
+                variant="success"
+                onClick={() => booking("NorthIndian", 15)}
+              >
                 Book Now→
               </Button>
               <p></p>
@@ -177,7 +210,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("Chinese",10)}>
+              <Button variant="success" onClick={() => booking("Chinese", 10)}>
                 Book Now→
               </Button>
               <p></p>
@@ -204,7 +237,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("Bengali",20)}>
+              <Button variant="success" onClick={() => booking("Bengali", 20)}>
                 Book Now→
               </Button>
               <p></p>
@@ -225,7 +258,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("American",25)}>
+              <Button variant="success" onClick={() => booking("American", 25)}>
                 Book Now→
               </Button>
               <p></p>
@@ -246,7 +279,7 @@ const Home = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer id="card-footer">
-              <Button variant="success" onClick={() => booking("Japani",15)}>
+              <Button variant="success" onClick={() => booking("Japani", 15)}>
                 Book Now→
               </Button>
               <p></p>
@@ -254,7 +287,7 @@ const Home = () => {
           </Card>
         </CardGroup>
       </div>
-      <Footer />
+      <br />
     </>
   );
 };

@@ -5,7 +5,6 @@
 }
 
 #hero {
-    height: 70vh;
     width: 100%;
     /* background-color: red; */
 }
@@ -24,8 +23,9 @@ body {
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     color: black;
+    padding: 15px;
     /* background-image: url('https://png.pngtree.com/png-vector/20230831/ourmid/pngtree-showing-the-front-of-restaurants-vector-png-image_9233081.png');
     background-size: 500px;
     background-repeat: no-repeat;
@@ -44,6 +44,10 @@ body {
 
 #table{
     font-style: italic;
+}
+#crousel {
+    width: 90%;
+    margin: auto;
 }
 
 #form {
@@ -123,9 +127,9 @@ td {
 }
 /* // table available */
 #avl{
-    position: fixed;
+    position:absolute;
     top: 200px;
-    left: 130px;
+    left: 110px;
     font-size: 30px;
 }
 @media(max-width:440px){
