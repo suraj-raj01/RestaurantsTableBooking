@@ -15,13 +15,11 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit";
 
-function mode() {
-  document.body.classList.toggle("demo");
-}
+
 const Layout = () => {
   return (
     <>
-      <Navbar expand="lg" id="navbar">
+      <Navbar collapseOnSelect expand="lg" id="navbar">
         <Container>
           <Navbar.Brand
             as={Link}
@@ -30,8 +28,8 @@ const Layout = () => {
           >
             Restuarant
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
+          <Navbar.Toggle aria-controls="navbarScroll" style={{boxShadow:'0px 0px 2px'}} />
+          <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{
@@ -87,6 +85,7 @@ const Layout = () => {
               <Nav.Link
                 as={Link}
                 to="https://www.linkedin.com/in/suraj-kumar-1965b0296/"
+                target="_blank"
               >
                 <span
                   className="pi pi-linkedin"
@@ -94,7 +93,7 @@ const Layout = () => {
                 ></span>
               </Nav.Link>
 
-              <Nav.Link as={Link} to="https://github.com/">
+              <Nav.Link as={Link} to="https://github.com/" target="_blank">
                 <span
                   className="pi pi-github"
                   style={{ fontSize: "1.2rem" }}
@@ -103,7 +102,7 @@ const Layout = () => {
             </div>
             <Form
               className="d-flex"
-              style={{ backgroundColor: "white", padding: "0px 10px" }}
+              style={{ backgroundColor: "white", padding: "5px 10px" }}
             >
               <Nav.Link as={Link} to="display">
                 <Button variant="outline-success">Bookings</Button>
@@ -214,7 +213,7 @@ const Layout = () => {
                 <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                 <p>
                   <MDBIcon color="secondary" icon="home" className="me-2" />
-                  New York, NY 10012, US
+                  Bharti-Niketan, Bhopal (MP)
                 </p>
                 <p>
                   <MDBIcon color="secondary" icon="envelope" className="me-3" />
